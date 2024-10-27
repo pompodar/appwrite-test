@@ -1,4 +1,5 @@
 import { Login } from "./pages/Login";
+import { Auth } from "./pages/Auth";
 import { Home } from "./pages/Home";
 import { UserProvider, useUser } from "./lib/context/user";
 import { IdeasProvider } from "./lib/context/ideas";
@@ -11,7 +12,7 @@ function App() {
       <UserProvider>
         <IdeasProvider>
           <Navbar /> {/* Add the navbar before page content */}
-          <main>{isLoginPage ? <Login /> : <Home />}</main>
+          <main>{isLoginPage ? <Auth /> : <Home />}</main>
          </IdeasProvider>
       </UserProvider>
     </div>
